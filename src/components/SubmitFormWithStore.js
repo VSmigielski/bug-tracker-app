@@ -50,9 +50,8 @@ class SubmitFormWithStore extends Component {
         }
         submission_store.resetSubmission();
         setTimeout(() => {
-            const submission
-             = submission_store.getSubmission(submission_id);
-            setSubmitting(false);
+        submission_store.getSubmission(submission_id);
+        setSubmitting(false);
         }, 400);
     }
  
@@ -62,7 +61,6 @@ class SubmitFormWithStore extends Component {
             <Container fluid>
                 <Formik
                     enableReinitialize={true}
-                    
                     initialValues
                         ={submission_store.selectedSubmission}
                     validate={this.handleValidateForm}
